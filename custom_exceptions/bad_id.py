@@ -1,0 +1,2 @@
+class BadId(Exception):
+    pass

@@ -1,0 +1,2 @@
+class BadName(Exception):
+    pass
