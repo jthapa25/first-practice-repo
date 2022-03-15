@@ -22,7 +22,7 @@ def test_catch_non_string_first_name():
 
 def test_catch_non_string_last_name():
     try:
-        customer_service.service_customer_record(0, "this is fine", 32783627)
+        customer_service.service_customer_record(Customer(0, "this is fine", 32783627))
         assert False
     except BadName as e:
         assert str(e) == "Please enter a valid last name"
@@ -38,7 +38,7 @@ def test_catch_first_name_too_long():
 
 def test_catch_last_name_too_long():
     try:
-        customer_service.service_customer_record(0, "this is fine", "This name is way too long for our app")
+        customer_service.service_customer_record(Customer(0, "this is fine", "This name is way too long for our app"))
         assert False
     except BadName as e:
         assert str(e) == "Last name is too long: it should be no more than 20 characters"
@@ -51,6 +51,6 @@ delete method validation tests
 
 def test_catch_non_int_typecastable_value():
     try:
-        customer_service.service_customer_record("one")
+        customer_service.service_delete_customer_record_by_id("one")
     except BadId as e:
         assert str(e) == "Please provide a valid customer Id"

@@ -41,5 +41,7 @@ class CustomerDAOImp(CustomerDAOInterface):
             raise ConnectionProblem(str(e))
 
 
-
+"""
+Make sure to handle ConnectionProblem and NothingDeleted in API
+"""
 
