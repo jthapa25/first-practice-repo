@@ -25,7 +25,7 @@ class AccountDAOInterface(ABC):
         pass
 
     @abstractmethod
-    def transfer_funds(self, sender_id: int, receiver_id: int, amount: float):
+    def transfer_funds(self, sender_id: int, receiver_id: int, amount: float) -> bool:
         pass
 
     @abstractmethod

@@ -15,7 +15,7 @@ class AccountDAOImp(AccountDAOInterface):
     def update_account_by_id(self, account: Account) -> Account:
         pass
 
-    def transfer_funds(self, sender_id: int, receiver_id: int, amount: float):
+    def transfer_funds(self, sender_id: int, receiver_id: int, amount: float) -> bool:
         pass
 
     def delete_account_by_id(self, account_id: int) -> bool:
