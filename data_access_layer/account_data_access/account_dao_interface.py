@@ -8,7 +8,7 @@ class AccountDAOInterface(ABC):
     this dao interface needs all the crud operators at a minimum
     """
     @abstractmethod
-    def create_account_record(self, account: Account) -> Account:
+    def create_account_record(self, account: Account) -> Account :
         pass
     """ select = read in crud"""
 
